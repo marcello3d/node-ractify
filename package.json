@@ -1,0 +1,31 @@
+{
+    "name": "ractify",
+    "version": "0.1.0",
+    "description": "browserify 2 + precompiled Ractive.js templates",
+    "main": "index.js",
+    "scripts": {
+        "test": "./node_modules/.bin/mocha"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/marcello3d/node-ractify.git"
+    },
+    "dependencies": {
+        "through": "2.3.4",
+        "tosource": "0.1.1",
+        "ractive": "0.3.4"
+    },
+    "devDependencies": {
+        "mocha": "1.12.0"
+    },
+    "browser": "runtime.js",
+    "keywords": [
+        "handlebars",
+        "ractive",
+        "ractive.js",
+        "browserify"
+    ],
+    "author": "Marcello Bastéa-Forte <marcello@cellosoft.com>",
+    "license": "zlib",
+    "readmeFilename": "Readme.md"
+}
