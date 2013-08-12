@@ -1,6 +1,6 @@
 {
     "name": "ractify",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "browserify 2 + precompiled Ractive.js templates",
     "main": "index.js",
     "scripts": {
