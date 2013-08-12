@@ -15,7 +15,8 @@ var bundle = browserify()
 bundle.transform(ractify)
 ```
 
-Clientside code:
+In your Client-side JavaScript you can include just the runtime version of Ractive. When you `require` a .ract file,
+ractify will parse it and export the pre-parsed array:
 ```js
 var Ractive = require('ractive/build/Ractive.runtime')
 var ractive = new Ractive({
@@ -27,7 +28,7 @@ var ractive = new Ractive({
 
 Commandline Browserify usage (I haven't actually tried this):
 ```
-$ npm install ractify
+$ npm install ractify ractive
 $ browserify -t ractify main.js > bundle.js
 ```
 
