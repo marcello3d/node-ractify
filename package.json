@@ -12,11 +12,14 @@
     },
     "dependencies": {
         "through": "2.3.4",
-        "tosource": "0.1.1",
-        "ractive": "0.3.4"
+        "tosource": "0.1.1"
+    },
+    "peerDependencies": {
+        "ractive": "~0.3.4"
     },
     "devDependencies": {
-        "mocha": "1.12.0"
+        "mocha": "1.12.0",
+        "ractive": "0.3.4"
     },
     "browser": "runtime.js",
     "keywords": [
