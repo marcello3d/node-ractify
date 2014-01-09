@@ -30,7 +30,7 @@ test('test.hbs', function(done) {
 test('bad.hbs', function(done) {
     getTransformedOutput(__dirname+"/bad.ract", function(error, output) {
         assert.ok(error)
-        assert.equal(error.toString(), 'Error: Tokenizer failed: unexpected string "Unexpected" (expected "}}")')
+        assert.equal(error.toString(), 'Error: Could not parse template: failed at character 0 ->{{#inverse Unexpecte...')
         done()
     })
 })

@@ -1,10 +1,10 @@
 {
     "name": "ractify",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "browserify 2 + precompiled Ractive.js templates",
     "main": "index.js",
     "scripts": {
-        "test": "./node_modules/.bin/mocha"
+        "test": "node node_modules/.bin/mocha"
     },
     "repository": {
         "type": "git",
@@ -12,14 +12,11 @@
     },
     "dependencies": {
         "through": "2.3.4",
-        "tosource": "0.1.1"
-    },
-    "peerDependencies": {
-        "ractive": "~0.3.4"
+        "tosource": "0.1.1",
+        "ractive": "RactiveJS/Ractive.git#5fe0aa6"
     },
     "devDependencies": {
-        "mocha": "1.12.0",
-        "ractive": "0.3.4"
+        "mocha": "1.12.0"
     },
     "browser": "runtime.js",
     "keywords": [

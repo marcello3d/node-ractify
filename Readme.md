@@ -15,10 +15,10 @@ var bundle = browserify()
 bundle.transform(ractify)
 ```
 
-In your Client-side JavaScript you can include just the runtime version of Ractive. When you `require` a .ract file,
-ractify will parse it and export the pre-parsed array:
+In your Client-side JavaScript, `require('ractfiy')` and it'll import the runtime-only version of ractive. `require` a
+`.ract` file, and ractify will parse it and export the pre-parsed array:
 ```js
-var Ractive = require('ractive/build/Ractive.runtime')
+var Ractive = require('ractify')
 var ractive = new Ractive({
     el: document.getElementById("foo",
     template: require('./views/foo.ract'),
