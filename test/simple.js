@@ -19,15 +19,23 @@ function getTransformedOutput(filename, callback) {
             callback(null, output)
         })
 }
-test('test.hbs', function(done) {
+test('test.ract', function(done) {
     getTransformedOutput(__dirname+"/test.ract", function(error, output) {
         assert.ifError(error)
-        assert.equal(output, 'module.exports=["Hello ",{t:2,r:"world"},"!"]')
+        assert.equal(output, fs.readFileSync('test/test.ract-output'))
         done()
     })
 })
 
-test('bad.hbs', function(done) {
+test('Clock-component.ract', function(done) {
+    getTransformedOutput(__dirname+"/Clock-component.ract", function(error, output) {
+        assert.ifError(error)
+        assert.equal(output, fs.readFileSync('test/Clock-component.ract-output'))
+        done()
+    })
+})
+
+test('bad.ract', function(done) {
     getTransformedOutput(__dirname+"/bad.ract", function(error, output) {
         assert.ok(error)
         assert.equal(error.toString(), 'Error: Could not parse template: failed at character 0 ->{{#inverse Unexpecte...')

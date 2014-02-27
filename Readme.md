@@ -3,6 +3,15 @@ Ractify
 
 [Browserify 2](https://github.com/substack/node-browserify) + [ractive.js](http://www.ractivejs.org/)
 
+Experimental component-based branch
+-----------------------------------
+Rather than just return the parse from Ractive, this version parses as a Ractive html component with optional style and
+script blocks. See [this issue](https://github.com/RactiveJS/Ractive/issues/366#issuecomment-36162827)
+
+As a result the usage changes slightly, but makes it much cleaner to create reusable Ractive-based components.
+
+See test [input](test/Clock-component.ract) and [output](test/Clock-component.ract-output) for an example.
+
 Usage / Examples
 ----------------
 
@@ -19,9 +28,9 @@ In your Client-side JavaScript, `require('ractfiy')` and it'll import the runtim
 `.ract` file, and ractify will parse it and export the pre-parsed array:
 ```js
 var Ractive = require('ractify')
-var ractive = new Ractive({
-    el: document.getElementById("foo",
-    template: require('./views/foo.ract'),
+var Foo = require('./views/foo.ract')
+var ractive = new Foo({
+    el: document.getElementById("foo"),
     data: ...
 })
 ```
