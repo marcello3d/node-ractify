@@ -4,7 +4,9 @@ var toSource = require('tosource')
 var parseComponentDefinition = require('./vendor/parseComponentDefinition')
 
 module.exports = function(file) {
-    if (!/\.ract$/.test(file)) return through()
+    if (!/\.ract$/.test(file)) {
+        return through()
+    }
 
     var source = ''
     var stream = through(
@@ -15,19 +17,30 @@ module.exports = function(file) {
             try {
                 var component = parseComponentDefinition(source);
 
-                var script = ['var Ractive = require("ractify");','var component = { exports:{} };']
+                var script
                 if (component.script) {
-                    script.push(component.script)
+                    script = [
+                        'var component = { exports:{} };',
+                        component.script
+                    ]
+                    if (component.template) {
+                        script.push('component.exports.template = '+toSource(component.template)+';')
+                    }
+                    if (component.css) {
+                        script.push('component.exports.css = '+toSource(component.css)+';')
+                    }
+                    script.push('module.exports = require("ractify").extend(component.exports);')
+                    this.queue(script.join('\n\n'))
+                } else {
+                    script = ['module.exports = require("ractify").extend({\n']
+                    script.push('  template: '+toSource(component.template))
+                    if (component.css) {
+                        script.push(',\n  css: '+toSource(component.css))
+                    }
+                    script.push('\n})')
+                    this.queue(script.join(''))
                 }
-                if (component.template) {
-                    script.push('component.exports.template = '+toSource(component.template)+';');
-                }
-                if (component.css) {
-                    script.push('component.exports.css = '+toSource(component.css)+';');
-                }
-                script.push('module.exports = Ractive.extend(component.exports);')
 
-                this.queue(script.join('\n\n'));
                 this.queue(null)
             } catch (ex) {
                 stream.emit('error', ex)

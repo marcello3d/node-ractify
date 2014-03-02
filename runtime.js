@@ -1,1 +1,1 @@
-module.exports = require('./vendor/Ractive.runtime')
+module.exports = require('Ractive/build/Ractive.runtime')

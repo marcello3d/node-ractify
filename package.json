@@ -15,14 +15,16 @@
     "tosource": "0.1.1"
   },
   "devDependencies": {
-    "mocha": "1.12.0"
+    "mocha": "1.12.0",
+    "ractive": "^0.4.0-pre1"
   },
   "browser": "runtime.js",
   "keywords": [
     "handlebars",
     "ractive",
     "ractive.js",
-    "browserify"
+    "browserify",
+    "browserify-transform"
   ],
   "author": "Marcello Bastéa-Forte <marcello@cellosoft.com>",
   "license": "zlib",

@@ -12,6 +12,18 @@ As a result the usage changes slightly, but makes it much cleaner to create reus
 
 See test [input](test/Clock-component.ract) and [output](test/Clock-component.ract-output) for an example.
 
+Installation
+------------
+
+
+Ractify does not install Ractive on its own, you must do so yourself (this allows you to update Ractive without an
+update to ractify).
+
+Example:
+```
+npm install --save ractive@0.4.0-pre1 ractify
+```
+
 Usage / Examples
 ----------------
 
@@ -24,20 +36,19 @@ var bundle = browserify()
 bundle.transform(ractify)
 ```
 
-In your Client-side JavaScript, `require('ractfiy')` and it'll import the runtime-only version of ractive. `require` a
-`.ract` file, and ractify will parse it and export the pre-parsed array:
+In your Client-side JavaScript, `require('ractify')` and it'll import the runtime-only version of ractive. `require` a
+`.ract` file, and ractify will parse it and export the Component:
+
 ```js
-var Ractive = require('ractify')
 var Foo = require('./views/foo.ract')
-var ractive = new Foo({
+var foo = new Foo({
     el: document.getElementById("foo"),
     data: ...
 })
 ```
 
-Commandline Browserify usage (I haven't actually tried this):
+Commandline Browserify usage:
 ```
-$ npm install ractify ractive
 $ browserify -t ractify main.js > bundle.js
 ```
 
