@@ -1,0 +1,9 @@
+<div class="kickass">Testing {{styles}} only.</div>
+
+
+<style>
+div.kickass {
+    /* blue is pretty kickass */
+    color: blue;
+}
+</style>

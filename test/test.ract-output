@@ -1,10 +1,6 @@
-var Ractive = require("ractify");
-
-var component = { exports:{} };
-
-component.exports.template = [ "Hello ",
+module.exports = require("ractify").extend({
+  template: [ "Hello ",
   { t:2,
     r:"world" },
-  "!" ];
-
-module.exports = Ractive.extend(component.exports);
+  "!" ]
+})

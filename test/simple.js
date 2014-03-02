@@ -22,7 +22,16 @@ function getTransformedOutput(filename, callback) {
 test('test.ract', function(done) {
     getTransformedOutput(__dirname+"/test.ract", function(error, output) {
         assert.ifError(error)
-        assert.equal(output, fs.readFileSync('test/test.ract-output'))
+        assert.equal(output, fs.readFileSync('test/test.ract-output', 'utf8'))
+        done()
+    })
+})
+
+
+test('test2.ract', function(done) {
+    getTransformedOutput(__dirname+"/test2.ract", function(error, output) {
+        assert.ifError(error)
+        assert.equal(output, fs.readFileSync('test/test2.ract-output', 'utf8'))
         done()
     })
 })
@@ -30,7 +39,7 @@ test('test.ract', function(done) {
 test('Clock-component.ract', function(done) {
     getTransformedOutput(__dirname+"/Clock-component.ract", function(error, output) {
         assert.ifError(error)
-        assert.equal(output, fs.readFileSync('test/Clock-component.ract-output'))
+        assert.equal(output, fs.readFileSync('test/Clock-component.ract-output', 'utf8'))
         done()
     })
 })
