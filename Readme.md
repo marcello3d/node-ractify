@@ -3,9 +3,9 @@ Ractify
 
 [Browserify 2](https://github.com/substack/node-browserify) + [ractive.js](http://www.ractivejs.org/)
 
-Experimental component-based branch
------------------------------------
-Rather than just return the parse from Ractive, this version parses as a Ractive html component with optional style and
+Upgrading to v0.3.0
+-------------------
+Rather than just return the parse from Ractive, ractify now parses a full Ractive html component with optional style and
 script blocks. See [this issue](https://github.com/RactiveJS/Ractive/issues/366#issuecomment-36162827)
 
 As a result the usage changes slightly, but makes it much cleaner to create reusable Ractive-based components.
@@ -15,19 +15,21 @@ See test [input](test/Clock-component.ract) and [output](test/Clock-component.ra
 Installation
 ------------
 
-
 Ractify does not install Ractive on its own, you must do so yourself (this allows you to update Ractive without an
 update to ractify).
 
 Example:
+
 ```
-npm install --save ractive@0.4.0-pre1 ractify
+npm install --save ractify
+npm install --save ractive@0.4.0-pre1
 ```
 
 Usage / Examples
 ----------------
 
 Browserify API usage:
+
 ```js
 var browserify = require('browserify')
 var ractify = require('ractify')
