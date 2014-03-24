@@ -1,1 +1,1 @@
-module.exports = require('Ractive/build/Ractive.runtime')
+module.exports = require('ractive/build/Ractive.runtime')
