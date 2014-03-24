@@ -1,6 +1,6 @@
 // Based on https://github.com/RactiveJS/requirejs-ractive/blob/master/rvc-src/utils/parseComponentDefinition.js
 
-var Ractive = require('Ractive')
+var Ractive = require('ractive')
 
 
 var requirePattern = /require\s*\(\s*(?:"([^"]+)"|'([^']+)')\s*\)/g;
