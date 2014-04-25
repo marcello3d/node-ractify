@@ -1,0 +1,1 @@
+throw new Error('require("ractify") is deprecated in 0.4.x. Replace with require("ractive/build/ractive.runtime"). See ractify readme for more details')
