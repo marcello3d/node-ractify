@@ -1,6 +1,4 @@
-module.exports = require("ractify").extend({
-  template: [ "Hello ",
+exports.template = [ "Hello ",
   { t:2,
     r:"world" },
   "!" ]
-})

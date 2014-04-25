@@ -20,25 +20,23 @@ module.exports = function(file) {
                 var script
                 if (component.script) {
                     script = [
-                        'var component = { exports:{} };',
+                        'var component = module',
                         component.script
                     ]
                     if (component.template) {
-                        script.push('component.exports.template = '+toSource(component.template)+';')
+                        script.push('component.exports.template = '+toSource(component.template))
                     }
                     if (component.css) {
-                        script.push('component.exports.css = '+toSource(component.css)+';')
+                        script.push('component.exports.css = '+toSource(component.css))
                     }
-                    script.push('module.exports = require("ractify").extend(component.exports);')
                     this.queue(script.join('\n\n'))
                 } else {
-                    script = ['module.exports = require("ractify").extend({\n']
-                    script.push('  template: '+toSource(component.template))
+                    script = []
+                    script.push('exports.template = '+toSource(component.template))
                     if (component.css) {
-                        script.push(',\n  css: '+toSource(component.css))
+                        script.push('exports.css = '+toSource(component.css))
                     }
-                    script.push('\n})')
-                    this.queue(script.join(''))
+                    this.queue(script.join('\n\n'))
                 }
 
                 this.queue(null)

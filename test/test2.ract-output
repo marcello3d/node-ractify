@@ -1,11 +1,10 @@
-module.exports = require("ractify").extend({
-  template: [ { t:7,
+exports.template = [ { t:7,
     e:"div",
     a:{ "class":[ "kickass" ] },
     f:[ "Testing ",
       { t:2,
         r:"styles" },
       " only." ] },
-  " " ],
-  css: "\ndiv.kickass {\n    /* blue is pretty kickass */\n    color: blue;\n}\n"
-})
+  " " ]
+
+exports.css = "\ndiv.kickass {\n    /* blue is pretty kickass */\n    color: blue;\n}\n"
