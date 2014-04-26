@@ -1,6 +1,6 @@
 {
   "name": "ractify",
-  "version": "0.3.3",
+  "version": "0.4.0",
   "description": "browserify 2 + precompiled Ractive.js components",
   "main": "index.js",
   "scripts": {
