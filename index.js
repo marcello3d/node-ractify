@@ -6,7 +6,7 @@ var parseComponentDefinition = require('./vendor/parseComponentDefinition')
 module.exports = function(file, options) {
     var ext = options && options.extension
         ? options.extension
-		: 'ract';
+        : 'ract';
 
     if (!new RegExp('.' + ext + '$', 'i').test(file)) {
         return through()
@@ -22,7 +22,7 @@ module.exports = function(file, options) {
                 var component = parseComponentDefinition(source);
 
                 var script
-                if (component.script) {
+                if (component.script || component.imports.length) {
                     script = [
                         'var component = module',
                         component.script
@@ -32,6 +32,12 @@ module.exports = function(file, options) {
                     }
                     if (component.css) {
                         script.push('component.exports.css = '+toSource(component.css))
+                    }
+                    if (component.imports.length) {
+                        script.push('component.exports.components = {}')
+                        component.imports.forEach(function (comp) {
+                            script.push('component.exports.components[\'' + comp.name + '\'] = Ractive.extend(require(\'' + comp.href + '\'));')
+                        })
                     }
                     this.queue(script.join('\n\n'))
                 } else {
