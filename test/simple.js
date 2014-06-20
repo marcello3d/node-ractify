@@ -36,6 +36,14 @@ test('test2.ract', function(done) {
     })
 })
 
+test('test3.ract', function(done) {
+	getTransformedOutput(__dirname+"/test3.ract", function(error, output) {
+		assert.ifError(error);
+		assert.equal(output, fs.readFileSync('test/test3.ract-output', 'utf8'))
+		done()
+	})
+})
+
 test('Clock-component.ract', function(done) {
     getTransformedOutput(__dirname+"/Clock-component.ract", function(error, output) {
         assert.ifError(error)

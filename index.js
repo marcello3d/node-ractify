@@ -19,10 +19,10 @@ module.exports = function(file) {
 
                 var script
                 if (component.script || component.imports.length) {
-                    script = [
-                        'var component = module',
-                        component.script
-                    ]
+                    script = [ 'var component = module' ]
+                    if (component.script) {
+                        script.push(component.script)
+                    }
                     if (component.template) {
                         script.push('component.exports.template = '+toSource(component.template))
                     }

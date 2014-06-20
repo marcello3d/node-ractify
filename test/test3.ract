@@ -1,0 +1,2 @@
+<link rel="ractive" href="./component.ract">
+<link rel="ractive" href="./component.ract" name="MyComponent">
