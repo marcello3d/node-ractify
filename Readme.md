@@ -98,6 +98,19 @@ Commandline Browserify usage:
 $ browserify -t ractify main.js > bundle.js
 ```
 
+If you want to use different file extension, e.g. ```.html```, you can use ```extension``` option:
+
+```js
+var browserify = require('browserify');
+var ractify = require('ractify');
+
+var bundle = browserify();
+bundle.transform({ extension: 'html' }, ractify);
+```
+
+```
+$ browserify -t [ ractify --extension html ] main.js > bundle.js
+```
 
 License
 -------
