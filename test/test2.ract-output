@@ -4,7 +4,6 @@ exports.template = [ { t:7,
     f:[ "Testing ",
       { t:2,
         r:"styles" },
-      " only." ] },
-  " " ]
+      " only." ] } ]
 
 exports.css = "\ndiv.kickass {\n    /* blue is pretty kickass */\n    color: blue;\n}\n"
