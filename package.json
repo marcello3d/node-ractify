@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "through": "2.3.4",
-    "tosource": "0.1.1"
+    "tosource": "0.1.2"
   },
   "devDependencies": {
     "mocha": "1.18.2",
