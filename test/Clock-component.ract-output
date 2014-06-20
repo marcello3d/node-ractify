@@ -110,8 +110,6 @@ component.exports.template = [ { t:7,
                     e:"line",
                     a:{ "class":[ "second-counterweight" ],
                       y1:[ "10" ],
-                      y2:[ "2" ] } } ] } ] } ] } ] },
-  " ",
-  " " ]
+                      y2:[ "2" ] } } ] } ] } ] } ] } ]
 
 component.exports.css = "\n    .rvc-clock-demo {\n        position: relative;\n        width: 100%;\n        height: 0;\n        padding-bottom: 100%;\n    }\n\n    .rvc-clock-demo svg {\n        position: absolute;\n        width: 100%;\n        height: 100%;\n    }\n\n    .rvc-clock-demo .clock-face {\n        stroke: #333;\n        fill: white;\n    }\n\n    .rvc-clock-demo .minor {\n        stroke: #999;\n        stroke-width: 0.5;\n    }\n\n    .rvc-clock-demo .major {\n        stroke: #333;\n        stroke-width: 1;\n    }\n\n    .rvc-clock-demo .hour {\n        stroke: #333;\n    }\n\n    .rvc-clock-demo .minute {\n        stroke: #666;\n    }\n\n    .rvc-clock-demo .second, .second-counterweight {\n        stroke: rgb(180,0,0);\n    }\n\n    .rvc-clock-demo .second-counterweight {\n        stroke-width: 3;\n    }\n"

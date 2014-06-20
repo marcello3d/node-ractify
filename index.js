@@ -1,7 +1,9 @@
 var through = require('through')
 var toSource = require('tosource')
 
-var parseComponentDefinition = require('./vendor/parseComponentDefinition')
+var rcu = require('rcu/rcu.node')
+
+rcu.init(require('ractive'))
 
 module.exports = function(file) {
     if (!/\.ract$/.test(file)) {
@@ -15,7 +17,7 @@ module.exports = function(file) {
         },
         function end() {
             try {
-                var component = parseComponentDefinition(source);
+                var component = rcu.parse(source)
 
                 var script
                 if (component.script) {
