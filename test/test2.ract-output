@@ -1,9 +1,10 @@
-exports.template = [ { t:7,
-    e:"div",
-    a:{ "class":[ "kickass" ] },
-    f:[ "Testing ",
-      { t:2,
-        r:"styles" },
-      " only." ] } ]
+exports.template = { v:1,
+  t:[ { t:7,
+      e:"div",
+      a:{ "class":"kickass" },
+      f:[ "Testing ",
+        { t:2,
+          r:"styles" },
+        " only." ] } ] }
 
 exports.css = "\ndiv.kickass {\n    /* blue is pretty kickass */\n    color: blue;\n}\n"
