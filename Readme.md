@@ -3,6 +3,11 @@ Ractify
 
 [Browserify 2](https://github.com/substack/node-browserify) + [ractive.js](http://www.ractivejs.org/)
 
+Upgrading from v0.4.x to v0.5.x
+-------------------------------
+
+Replace `require('ractive/build/ractive.runtime')` with `require('ractive/ractive.runtime')`
+
 v0.4.x
 ------
 
