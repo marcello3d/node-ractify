@@ -51,3 +51,11 @@ test('bad.ract', function(done) {
         done()
     })
 })
+
+test('import.ract', function(done) {
+    getTransformedOutput(__dirname+"/import.ract", function(error, output) {
+        assert.ifError(error)
+        assert.equal(output, fs.readFileSync('test/import.ract-output', 'utf8'))
+        done()
+    })
+})

@@ -1,4 +1,6 @@
-exports.template = { v:1,
+var component = module
+
+component.exports.template = { v:1,
   t:[ "Hello ",
     { t:2,
       r:"world" },
