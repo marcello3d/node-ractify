@@ -1,0 +1,20 @@
+var component = module
+
+component.exports.template = { v:1,
+  t:[ { t:7,
+      e:"div",
+      a:{ "class":"parent-component" },
+      f:[ { t:7,
+          e:"test" } ] } ] }
+
+var __beforeInit = component.exports.beforeInit
+
+component.exports.beforeInit = function(options) {
+
+if (!options.components) options.components = {}
+
+if (!options.components['test']) options.components['test'] = Ractive.extend(require('./test.ract'))
+
+__beforeInit && __beforeInit(options)
+
+}

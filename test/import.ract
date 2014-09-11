@@ -1,0 +1,3 @@
+<link rel="ractive" href="test.ract" />
+
+<div class="parent-component"><test></test></div>

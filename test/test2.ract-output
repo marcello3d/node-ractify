@@ -1,4 +1,6 @@
-exports.template = { v:1,
+var component = module
+
+component.exports.template = { v:1,
   t:[ { t:7,
       e:"div",
       a:{ "class":"kickass" },
@@ -7,4 +9,4 @@ exports.template = { v:1,
           r:"styles" },
         " only." ] } ] }
 
-exports.css = "\ndiv.kickass {\n    /* blue is pretty kickass */\n    color: blue;\n}\n"
+component.exports.css = "\ndiv.kickass {\n    /* blue is pretty kickass */\n    color: blue;\n}\n"
