@@ -37,9 +37,10 @@ module.exports = function(file, options) {
                 if (component.imports.length > 0) {
                     script.push('var __beforeInit = component.exports.beforeInit')
                     script.push('component.exports.beforeInit = function(options) {')
-                    script.push('options.components = {}')
+                    script.push('if (!options.components) options.components = {}')
                     component.imports.forEach(function(imp) {
-                        script.push("options.components['" + imp.name + "'] = Ractive.extend(require('./" + imp.href + "'))")
+                        var component = "options.components['" + imp.name + "']";
+                        script.push('if (!' + component + ') ' + component + " = Ractive.extend(require('./" + imp.href + "'))")
                     })
                     script.push('__beforeInit && __beforeInit(options)')
                     script.push('}')

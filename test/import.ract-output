@@ -11,9 +11,9 @@ var __beforeInit = component.exports.beforeInit
 
 component.exports.beforeInit = function(options) {
 
-options.components = {}
+if (!options.components) options.components = {}
 
-options.components['test'] = Ractive.extend(require('./test.ract'))
+if (!options.components['test']) options.components['test'] = Ractive.extend(require('./test.ract'))
 
 __beforeInit && __beforeInit(options)
 
