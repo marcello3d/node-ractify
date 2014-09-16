@@ -11,13 +11,13 @@
     "url": "git://github.com/marcello3d/node-ractify.git"
   },
   "dependencies": {
-    "through": "2.3.4",
-    "rcu": "0.2.0",
+    "through": "2.3.6",
+    "rcu": "0.2.1",
     "tosource": "0.1.2"
   },
   "devDependencies": {
-    "mocha": "1.18.2",
-    "ractive": "0.5.4"
+    "mocha": "1.21.4",
+    "ractive": "0.5.7"
   },
   "browser": "runtime.js",
   "keywords": [
