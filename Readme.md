@@ -1,6 +1,8 @@
 Ractify
 =================
 
+[![Build Status](https://travis-ci.org/marcello3d/node-ractify.svg?branch=master)](https://travis-ci.org/marcello3d/node-ractify)
+
 [Browserify 2](https://github.com/substack/node-browserify) + [ractive.js](http://www.ractivejs.org/)
 
 Upgrading from v0.4.x to v0.5.x
