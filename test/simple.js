@@ -47,7 +47,7 @@ test('Clock-component.ract', function(done) {
 test('bad.ract', function(done) {
     getTransformedOutput(__dirname+"/bad.ract", function(error, output) {
         assert.ok(error)
-        assert.equal(error.toString(), 'ParseError: Expected closing delimiter \'}}\' after reference at line 1 character 12:\n{{#inverse Unexpected\n           ^----')
+        assert.equal(error.toString(), 'ParseError: Expected closing delimiter \'}}\' at line 1 character 12:\n{{#inverse Unexpected\n           ^----')
         done()
     })
 })

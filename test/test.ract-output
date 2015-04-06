@@ -1,5 +1,8 @@
-exports.template = { v:1,
+exports.template = { v:3,
   t:[ "Hello ",
     { t:2,
-      r:"world" },
+      r:"world",
+      p:[ 1,
+        7,
+        6 ] },
     "!" ] }
