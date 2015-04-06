@@ -1,7 +1,7 @@
 Ractify
 =================
 
-[![Build Status](https://travis-ci.org/marcello3d/node-ractify.svg?branch=master)](https://travis-ci.org/marcello3d/node-ractify)
+[![npm version](https://badge.fury.io/js/ractify.svg)](http://badge.fury.io/js/ractify) [![Build Status](https://travis-ci.org/marcello3d/node-ractify.svg?branch=master)](https://travis-ci.org/marcello3d/node-ractify)
 
 [Browserify 2](https://github.com/substack/node-browserify) + [ractive.js](http://www.ractivejs.org/)
 
