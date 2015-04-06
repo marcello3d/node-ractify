@@ -1,4 +1,4 @@
-# UNRELEASED
+# 0.6.0 (2015-04-06)
 
   * added HISTORY.md
   * update to Ractive 0.7.2, rcu 0.4.0
