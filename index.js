@@ -1,7 +1,7 @@
 var through = require('through')
 var toSource = require('tosource')
 
-var rcu = require('rcu/rcu.node')
+var rcu = require('rcu')
 
 rcu.init(require('ractive'))
 
