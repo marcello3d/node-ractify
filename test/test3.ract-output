@@ -1,0 +1,9 @@
+var component = module
+
+component.exports.template = [  ]
+
+component.exports.components = {}
+
+component.exports.components['MyComponent'] = Ractive.extend(require('./component.ract'));
+
+component.exports.components['component'] = Ractive.extend(require('./component.ract'));
